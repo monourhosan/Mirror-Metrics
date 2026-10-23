@@ -2,25 +2,115 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #072442;
+  --navy: #072442;
+  --royal-blue: #24538e;
+  --teal: #13a8a8;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  background-color: #ffffff;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  color: #072442;
+  font-family: var(--font-geist-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom UI Accent Classes matching strict prompt specifications */
+.badge-red {
+  background-color: #ff5f56;
+  border: 1px solid #e0443e;
+  color: #790a05;
+}
+
+.badge-red-subtle {
+  background-color: #fff1f0;
+  border: 1px solid #e0443e;
+  color: #790a05;
+}
+
+.badge-yellow {
+  background-color: #ffbd2e;
+  border: 1px solid #dea123;
+  color: #875210;
+}
+
+.badge-yellow-subtle {
+  background-color: #fff9e6;
+  border: 1px solid #dea123;
+  color: #875210;
+}
+
+.badge-green {
+  background-color: #27c93f;
+  border: 1px solid #1aab29;
+  color: #0c4f16;
+}
+
+.badge-green-subtle {
+  background-color: #edfcf0;
+  border: 1px solid #1aab29;
+  color: #0c4f16;
+}
+
+.btn-green-accent {
+  background-color: #27c93f;
+  border: 1px solid #1aab29;
+  color: #0c4f16;
+}
+
+.btn-green-accent:hover {
+  background-color: #22b839;
+}
+
+.btn-navy {
+  background-color: #072442;
+  border: 1px solid #051a30;
+  color: #ffffff;
+}
+
+.btn-navy:hover {
+  background-color: #0c355f;
+}
+
+/* macOS-inspired Window Header Dots */
+.mac-dot-red {
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+  background-color: #ff5f56;
+  border: 1px solid #e0443e;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.mac-dot-yellow {
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+  background-color: #ffbd2e;
+  border: 1px solid #dea123;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.mac-dot-green {
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+  background-color: #27c93f;
+  border: 1px solid #1aab29;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* Custom styling for dialog backdrop */
+dialog::backdrop {
+  background-color: rgba(7, 36, 66, 0.45);
+  backdrop-filter: blur(4px);
 }
